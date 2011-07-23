@@ -7662,11 +7662,13 @@ var parse_js=new function(){function W(a,b,c){var d=[];for(var e=0;e<a.length;++
 				code = code.innerHTML;
 			}
 		}
-		paper = scope;
+		//paper = scope;
 		var view = scope.view,
 			tool = scope.tool = /on(?:Key|Mouse)(?:Up|Down|Move|Drag)/.test(code)
 					&& new Tool(),
 			res;
+			
+		if (tool) { paper.tools.push(tool); }
 		with (scope) {
 			(function() {
 				var onEditOptions, onSelect, onDeselect, onReselect, onMouseDown,
