@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<script type='text/javascript' src='jquery-1.6.2.js'></script>
+<script type='text/javascript' src='paper-nightly.js'></script>
+<script type='text/javascript' src='img.js'></script>
+<script type="text/paperscript" src="pp.js" canvas="canvas"></script>
+<script type="text/paperscript" src="tadpole.js" canvas="canvas"></script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class='flex'>
+
+<header><h1>Simple Image Editor</h1></header>
+
+<div id="container" class='flex flex-placeholder'>
+	<div id='sidebar'>
+		<ul id='controls'>
+			<li><a id='control-select' href='#'>Draw</a></li>
+			<li><a id='control-draw' href='#'>Draw</a></li>
+			<li><a id='control-shape' href='#'>Shape</a></li>
+			<li><a id='control-eye' href='#'>Eyedropper</a></li>
+			<li><a id='control-bucket' href='#'>Bucket</a></li>
+		</ul>
+		<ul id='colors'>
+			<li><a href='#' id='color-1'></a></li>
+			<li><a href='#' id='color-2'></a></li>
+		</ul>
+	</div>
+	
+	<div id='draw' class='flex-placeholder flex'>
+		<div class='flex-placeholder'></div>
+		
+		<div id='draw-inner'>
+				<canvas id='canvas' width="640" height="480" style="background-color:red;"></canvas>
+		</div>
+		
+		<div class='flex-placeholder'></div>
+	</div>
+</div>
+
+<footer>---</footer>
+
+
+</body>
+</html>

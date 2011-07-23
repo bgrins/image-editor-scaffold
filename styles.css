@@ -1,0 +1,26 @@
+
+body, html { height:100%; margin:0; padding:0; }
+.flex { display: -moz-box; display: -webkit-box; display: box;  }
+.flex-placeholder { -webkit-box-flex: 1; -moz-box-flex: 1; box-flex: 1; }
+body, #draw { -webkit-box-orient: vertical; }
+
+header { background-color: #f0f0f0; border-bottom:solid #bbb 1px; }
+header h1 { font-size:1.5em;}
+footer { background-color: #f0f0f0; }
+#container > div { margin:8px; outline:solid 1px;  }
+
+#draw { overflow:scroll; background-color:#666;}
+#draw-inner { 
+background-color: #fff; outline: solid 1px; margin:0 auto; 
+height:480px; width:640px; position:relative;
+}
+canvas.mask { position:absolute; top:0; left:0; z-index: 2; display:none;}
+
+
+#sidebar ul { margin:0; padding: 0; }
+#controls a { color: #99f; }
+#controls a.active { color: #339; }
+
+#sidebar #colors { margin-top:40px; }
+#colors a { width: 25px; height:25px; display:inline-block; border: solid 1px #fff; }
+#colors a.selected { border-color: #333; }
