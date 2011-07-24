@@ -4,10 +4,26 @@ body, html { height:100%; margin:0; padding:0; }
 .flex-placeholder { -webkit-box-flex: 1; -moz-box-flex: 1; box-flex: 1; }
 body, #draw { -webkit-box-orient: vertical; }
 
-header { background-color: #f0f0f0; border-bottom:solid #bbb 1px; }
-header h1 { font-size:1.5em; margin-bottom:1px;}
-footer { background-color: #f0f0f0; }
-#container > div { margin:8px; outline:solid 1px;  }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; } 
+
+header { background-color: #333; border-bottom:solid #bbb 1px; color:white; padding-right:20px;}
+header h1 {  font-size:14px; margin:1px; float:left; }
+header span { float:right; text-decoration: underline; cursor: pointer;}
+
+#project { background-color: #ddd; border-bottom: solid #000 1px;padding:6px 0; padding-right:20px; }
+#actions { float:right;  }
+#files { margin-left: 100px;float:left; }
+#files ul { margin:0; padding:0; display:inline-block;}
+#files ul li, #new-file { 
+display:inline-block; 
+
+}
+
+/*footer { background-color: #f0f0f0; }
+#container > div { margin:8px; outline:solid 1px;  }*/
 
 #draw { overflow:scroll; background-color:#666;}
 #draw-inner { 
@@ -16,7 +32,7 @@ height:480px; width:640px; /*position:relative;*/
 }
 canvas.mask { position:absolute; top:0; left:0; z-index: 2; display:none;}
 
-
+#sidebar {padding:8px; border-right:3px solid #909;}
 #sidebar ul { margin:0; padding: 0; }
 #controls a { color: #99f; }
 #controls a.active { color: #339; }
@@ -24,3 +40,6 @@ canvas.mask { position:absolute; top:0; left:0; z-index: 2; display:none;}
 #sidebar #colors { margin-top:40px; }
 #colors a { width: 25px; height:25px; display:inline-block; border: solid 1px #fff; }
 #colors a.active { border-color: #333; }
+
+
+.awesome{background-color:#444!important;color:#fff!important}.awesome{padding:3px 10px 4px!important;font-size:13px!important}.awesome:active{padding:6px 10px 5px!important}.awesome{border:0!important;cursor:pointer!important;font:inherit!important;font-style:normal!important;font-weight:bold!important;line-height:1em!important;position:relative!important;text-align:center!important;text-decoration:none!important;margin-top:0!important;margin-bottom:0!important;text-shadow:0 -1px 1px rgba(0,0,0,0.25),-2px 0 1px rgba(0,0,0,0.25)!important;border-radius:5px!important;-moz-border-radius:5px!important;-webkit-border-radius:5px!important;box-shadow:0 1px 2px rgba(0,0,0,0.5)!important;-moz-box-shadow:0 1px 2px rgba(0,0,0,0.5)!important;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.5)!important;background-image:-moz-linear-gradient(top,rgba(255,255,255,.2),rgba(150,150,150,.2),rgba(0,0,0,.0))!important;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(rgba(255,255,255,.2)),color-stop(0.5,rgba(150,150,150,.2)),to(rgba(0,0,0,.0)))!important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#10000000) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=2);display:-moz-inline-stack;display:inline-block;vertical-align:middle!important;*display:inline!important;position:relative;zoom:1;-moz-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-user-select:none;-webkit-touch-callout:none}@media all and (-webkit-min-device-pixel-ratio:10000),not all and (-webkit-min-device-pixel-ratio:0){input.awesome{border:1px solid RGBa(0,0,0,0)!important}}.awesome::selection{background:transparent}.awesome{outline:0}.awesome::-moz-focus-inner{border:none}.awesome:focus,.awesome:hover{background-image:-moz-linear-gradient(top,rgba(255,255,255,.4),rgba(150,150,150,.3),rgba(0,0,0,.0))!important;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(rgba(255,255,255,.4)),color-stop(0.5,rgba(150,150,150,.3)),to(rgba(0,0,0,.0)))!important;#filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50ffffff,endColorstr=#20000000) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=135,strength=2)}.awesome:active{background-image:-moz-linear-gradient(top,rgba(0,0,0,.2),rgba(150,150,150,.2),rgba(255,255,255,.2))!important;background-image:-webkit-gradient(linear,0% 0,0% 100%,from(rgba(0,0,0,.2)),color-stop(0.5,rgba(150,150,150,.2)),to(rgba(255,255,255,.2)))!important;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#20000000,endColorstr=#50ffffff) progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315,strength=1);box-shadow:inset 0 1px 2px rgba(0,0,0,0.7)!important;-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.7)!important;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.7)!important}@media screen and (-webkit-min-device-pixel-ratio:0){.awesome:active{-webkit-box-shadow:none}}
