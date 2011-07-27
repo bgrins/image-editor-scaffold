@@ -4,8 +4,10 @@
 <script type='text/javascript' src='framework/jquery-1.6.2.js'></script>
 <script type='text/javascript' src='framework/underscore.js'></script>
 <script type='text/javascript' src='framework/backbone.js'></script>
+<script type='text/javascript' src='framework/paper-nightly.js'></script>
+<script type='text/javascript' src='framework/util.js'></script>
+<script type='text/javascript' src='app/hierarchy.js'></script>
 <script type='text/javascript' src='jquery.tools.min.js'></script>
-<script type='text/javascript' src='paper-nightly.js'></script>
 <script type='text/javascript' src='img.js'></script>
 <script type="text/paperscript" src="pp.js" canvas="canvas"></script>
 <script type="text/paperscript1" src="circle.js" canvas="canvas"></script>
@@ -43,10 +45,7 @@
 			<li><a href='#' id='color-1'></a></li>
 			<li><a href='#' id='color-2'></a></li>
 		</ul>
-		<ul id="layers">
-			<li>Layer 1</li>
-			<li>Layer 2</li>
-		</ul>
+		<div id="layer_container"></div>
 	</div>
 	
 	<div id='draw' class='flex-placeholder flex'>
@@ -62,6 +61,24 @@
 
 <!--<footer>---</footer>-->
 
+<script type="text/template" id="search_template">
+    <label>Layers</label>
+    
+    <ul id="layers">
+    <% _.each(layers, function(layer) { %> 
+    	<li><%= layer.get("name") %>
+    		<ul class='items'>
+    		<% _.each(layer.get("items").models, function(item) { %> 
+    			<li><%= item.get("name") %></li> 
+    		<% }); %>
+    		</ul>
+    	</li> 
+    <% }); %>
+    </ul>
+    
+    <input type="text" id="search_input" />
+    <input type="button" id="search_button" value="Add" />
+</script>
 
 </body>
 </html>
