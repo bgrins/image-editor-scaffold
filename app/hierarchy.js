@@ -14,7 +14,6 @@ ProjectView = Backbone.View.extend({
    	},
    	render: function(){
 		var variables = { layers: this.model.layers.models };
-		log("Avout to render", variables);
    		var compiled = _.template(this.template, variables);
 		this.el.html(compiled);
    	},

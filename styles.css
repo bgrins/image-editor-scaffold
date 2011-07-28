@@ -21,19 +21,20 @@ header span { float:right; text-decoration: underline; cursor: pointer;}
 display:inline-block; 
 
 }
-
+#layer_container {  background:white; border: solid 2px; position:absolute; bottom:0; }
+#layer_container ul { margin:0; padding: 0; }
 /*footer { background-color: #f0f0f0; }
 #container > div { margin:8px; outline:solid 1px;  }*/
 
-#draw { overflow:scroll; background-color:#666;}
+#draw { overflow:scroll; background-color:#666; }
 #draw-inner { 
 background-color: #fff; outline: solid 1px; margin:0 auto; 
 height:480px; width:640px; /*position:relative;*/
 }
 canvas.mask { position:absolute; top:0; left:0; z-index: 2; display:none;}
 
-#sidebar {padding:8px; border-right:3px solid #909;}
-#sidebar ul { margin:0; padding: 0; }
+#sidebar { border-right:3px solid #909;}
+#controls, #colors {padding:8px; margin:0; }
 #controls a { color: #99f; }
 #controls a.active { color: #339; }
 
